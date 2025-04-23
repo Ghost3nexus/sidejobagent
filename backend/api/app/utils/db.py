@@ -97,6 +97,13 @@ class InMemoryDB:
         """Get all jobs"""
         return list(self.jobs.values())
     
+    def get_job_by_url(self, url: str) -> Optional[Dict[str, Any]]:
+        """Get job by URL"""
+        for job in self.jobs.values():
+            if job["url"] == url:
+                return job
+        return None
+    
     def create_application(self, application_data: Dict[str, Any]) -> Dict[str, Any]:
         """Create a new job application"""
         application_id = str(uuid.uuid4())
