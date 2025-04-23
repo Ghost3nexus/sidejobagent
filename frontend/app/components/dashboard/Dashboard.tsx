@@ -42,17 +42,17 @@ export default function Dashboard() {
       <h1 className="text-3xl font-bold">ダッシュボード</h1>
       
       {!stats.profileComplete && (
-        <Card className="bg-yellow-50 border-yellow-200">
+        <Card className="bg-secondary/50 border-primary/20">
           <CardContent className="pt-6">
             <div className="flex items-center gap-4">
-              <User className="h-8 w-8 text-yellow-500" />
+              <User className="h-8 w-8 text-primary" />
               <div>
                 <h3 className="text-lg font-semibold">プロフィールを完成させましょう</h3>
-                <p className="text-sm text-gray-600">最適な求人マッチングのために、プロフィール情報を入力してください。</p>
+                <p className="text-sm text-muted-foreground">最適な求人マッチングのために、プロフィール情報を入力してください。</p>
               </div>
               <div className="ml-auto">
                 <Link href="/profile" passHref>
-                  <Button>プロフィールを編集</Button>
+                  <Button className="bg-primary hover:bg-primary/90">プロフィールを編集</Button>
                 </Link>
               </div>
             </div>
@@ -68,7 +68,7 @@ export default function Dashboard() {
           </CardHeader>
           <CardContent>
             <div className="flex items-center">
-              <Briefcase className="h-8 w-8 text-blue-500 mr-3" />
+              <Briefcase className="h-8 w-8 text-primary mr-3" />
               <span className="text-3xl font-bold">
                 {isLoading ? '...' : stats.totalJobs}
               </span>
@@ -83,14 +83,14 @@ export default function Dashboard() {
           </CardHeader>
           <CardContent>
             <div className="flex items-center">
-              <TrendingUp className="h-8 w-8 text-green-500 mr-3" />
+              <TrendingUp className="h-8 w-8 text-primary mr-3" />
               <span className="text-3xl font-bold">
                 {isLoading ? '...' : stats.matchedJobs}
               </span>
             </div>
             <div className="mt-4">
               <Link href="/jobs" passHref>
-                <Button variant="outline" size="sm">求人を見る</Button>
+                <Button variant="outline" size="sm" className="border-primary/20 hover:bg-primary/5 text-primary">求人を見る</Button>
               </Link>
             </div>
           </CardContent>
@@ -103,14 +103,14 @@ export default function Dashboard() {
           </CardHeader>
           <CardContent>
             <div className="flex items-center">
-              <FileText className="h-8 w-8 text-purple-500 mr-3" />
+              <FileText className="h-8 w-8 text-primary mr-3" />
               <span className="text-3xl font-bold">
                 {isLoading ? '...' : stats.applications}
               </span>
             </div>
             <div className="mt-4">
               <Link href="/applications" passHref>
-                <Button variant="outline" size="sm">応募履歴を見る</Button>
+                <Button variant="outline" size="sm" className="border-primary/20 hover:bg-primary/5 text-primary">応募履歴を見る</Button>
               </Link>
             </div>
           </CardContent>
@@ -127,37 +127,37 @@ export default function Dashboard() {
             <p>読み込み中...</p>
           ) : (
             <div className="space-y-4">
-              <div className="p-4 border rounded-lg">
+              <div className="p-4 border border-border rounded-lg hover:shadow-md transition-shadow">
                 <h3 className="font-semibold">フロントエンドエンジニア</h3>
-                <p className="text-sm text-gray-600">テック株式会社 • 6,000円/時</p>
+                <p className="text-sm text-muted-foreground">テック株式会社 • 6,000円/時</p>
                 <div className="flex flex-wrap gap-2 my-2">
-                  <span className="px-2 py-1 bg-blue-100 text-blue-800 rounded-full text-xs">React</span>
-                  <span className="px-2 py-1 bg-blue-100 text-blue-800 rounded-full text-xs">Next.js</span>
-                  <span className="px-2 py-1 bg-blue-100 text-blue-800 rounded-full text-xs">TypeScript</span>
+                  <span className="px-2 py-1 bg-primary/10 text-primary rounded-full text-xs">React</span>
+                  <span className="px-2 py-1 bg-primary/10 text-primary rounded-full text-xs">Next.js</span>
+                  <span className="px-2 py-1 bg-primary/10 text-primary rounded-full text-xs">TypeScript</span>
                 </div>
                 <div className="flex justify-end">
-                  <Button variant="outline" size="sm" className="mr-2">詳細</Button>
-                  <Button size="sm">応募する</Button>
+                  <Button variant="outline" size="sm" className="mr-2 border-primary/20 hover:bg-primary/5">詳細</Button>
+                  <Button size="sm" className="bg-primary hover:bg-primary/90">応募する</Button>
                 </div>
               </div>
               
-              <div className="p-4 border rounded-lg">
+              <div className="p-4 border border-border rounded-lg hover:shadow-md transition-shadow">
                 <h3 className="font-semibold">バックエンドエンジニア</h3>
-                <p className="text-sm text-gray-600">デジタルソリューションズ • 7,000円/時</p>
+                <p className="text-sm text-muted-foreground">デジタルソリューションズ • 7,000円/時</p>
                 <div className="flex flex-wrap gap-2 my-2">
-                  <span className="px-2 py-1 bg-blue-100 text-blue-800 rounded-full text-xs">Python</span>
-                  <span className="px-2 py-1 bg-blue-100 text-blue-800 rounded-full text-xs">FastAPI</span>
-                  <span className="px-2 py-1 bg-blue-100 text-blue-800 rounded-full text-xs">PostgreSQL</span>
+                  <span className="px-2 py-1 bg-primary/10 text-primary rounded-full text-xs">Python</span>
+                  <span className="px-2 py-1 bg-primary/10 text-primary rounded-full text-xs">FastAPI</span>
+                  <span className="px-2 py-1 bg-primary/10 text-primary rounded-full text-xs">PostgreSQL</span>
                 </div>
                 <div className="flex justify-end">
-                  <Button variant="outline" size="sm" className="mr-2">詳細</Button>
-                  <Button size="sm">応募する</Button>
+                  <Button variant="outline" size="sm" className="mr-2 border-primary/20 hover:bg-primary/5">詳細</Button>
+                  <Button size="sm" className="bg-primary hover:bg-primary/90">応募する</Button>
                 </div>
               </div>
               
               <div className="text-center mt-4">
                 <Link href="/jobs" passHref>
-                  <Button variant="link">すべての求人を見る →</Button>
+                  <Button variant="link" className="text-primary hover:text-primary/80">すべての求人を見る →</Button>
                 </Link>
               </div>
             </div>

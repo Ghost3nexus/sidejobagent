@@ -29,18 +29,18 @@ export default function AuthForm() {
   };
 
   return (
-    <Card className="w-full max-w-md mx-auto">
-      <CardHeader>
-        <CardTitle className="text-2xl font-bold">副業マッチングAIエージェント</CardTitle>
-        <CardDescription>
+    <Card className="w-full max-w-md mx-auto shadow-lg">
+      <CardHeader className="pb-6">
+        <CardTitle className="text-2xl font-bold text-primary">副業マッチングAIエージェント</CardTitle>
+        <CardDescription className="text-muted-foreground">
           アカウントを作成して、最適な副業案件を見つけましょう。
         </CardDescription>
       </CardHeader>
       <CardContent>
         <Tabs defaultValue="signin" className="w-full">
-          <TabsList className="grid w-full grid-cols-2">
-            <TabsTrigger value="signin">ログイン</TabsTrigger>
-            <TabsTrigger value="signup">新規登録</TabsTrigger>
+          <TabsList className="grid w-full grid-cols-2 bg-secondary">
+            <TabsTrigger value="signin" className="data-[state=active]:bg-primary data-[state=active]:text-primary-foreground">ログイン</TabsTrigger>
+            <TabsTrigger value="signup" className="data-[state=active]:bg-primary data-[state=active]:text-primary-foreground">新規登録</TabsTrigger>
           </TabsList>
           <TabsContent value="signin">
             <form onSubmit={handleSignIn} className="space-y-4 mt-4">
@@ -65,7 +65,7 @@ export default function AuthForm() {
                   required 
                 />
               </div>
-              <Button type="submit" className="w-full" disabled={isLoading}>
+              <Button type="submit" className="w-full bg-primary hover:bg-primary/90" disabled={isLoading}>
                 {isLoading ? 'ログイン中...' : 'ログイン'}
               </Button>
             </form>
@@ -93,7 +93,7 @@ export default function AuthForm() {
                   required 
                 />
               </div>
-              <Button type="submit" className="w-full" disabled={isLoading}>
+              <Button type="submit" className="w-full bg-primary hover:bg-primary/90" disabled={isLoading}>
                 {isLoading ? '登録中...' : '新規登録'}
               </Button>
             </form>
@@ -101,9 +101,9 @@ export default function AuthForm() {
         </Tabs>
       </CardContent>
       <CardFooter className="flex justify-center">
-        <p className="text-sm text-gray-500">
+        <p className="text-sm text-muted-foreground">
           または
-          <Button variant="link" className="p-0 h-auto ml-1">
+          <Button variant="link" className="p-0 h-auto ml-1 text-primary">
             Googleでログイン
           </Button>
         </p>

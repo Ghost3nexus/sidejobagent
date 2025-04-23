@@ -13,9 +13,9 @@ export default function Sidebar() {
   };
   
   return (
-    <div className="fixed inset-y-0 left-0 w-64 bg-white border-r border-gray-200 hidden lg:flex flex-col">
+    <div className="fixed inset-y-0 left-0 w-64 bg-sidebar border-r border-sidebar-border hidden lg:flex flex-col">
       <div className="p-6">
-        <h1 className="text-xl font-bold">副業マッチングAI</h1>
+        <h1 className="text-xl font-bold text-sidebar-primary">副業マッチングAI</h1>
       </div>
       
       <nav className="flex-1 px-4 space-y-2">
@@ -60,8 +60,8 @@ export default function Sidebar() {
         </Link>
       </nav>
       
-      <div className="p-4 border-t border-gray-200">
-        <Button variant="ghost" className="w-full justify-start">
+      <div className="p-4 border-t border-sidebar-border">
+        <Button variant="ghost" className="w-full justify-start text-sidebar-foreground hover:text-sidebar-primary">
           <LogOut className="mr-2 h-4 w-4" />
           ログアウト
         </Button>
