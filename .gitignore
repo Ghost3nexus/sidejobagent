@@ -10,6 +10,7 @@ backend/venv
 backend/__pycache__
 backend/**/__pycache__
 backend/.env
+backend/api/venv/
 
 # OS files
 .DS_Store
