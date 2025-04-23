@@ -82,7 +82,7 @@ export default function ResumeBuilder() {
               <Label htmlFor="job-select">求人を選択（オプション）</Label>
               <select 
                 id="job-select"
-                className="w-full p-2 border rounded-md"
+                className="w-full p-2 border border-input rounded-md focus:outline-none focus:ring-2 focus:ring-primary/30"
                 value={selectedJob}
                 onChange={(e) => setSelectedJob(e.target.value)}
               >
@@ -95,7 +95,7 @@ export default function ResumeBuilder() {
             <Button 
               onClick={handleGenerateResume} 
               disabled={isGenerating}
-              className="w-full"
+              className="w-full bg-primary hover:bg-primary/90"
             >
               {isGenerating ? '生成中...' : '履歴書を生成'}
             </Button>
@@ -112,15 +112,15 @@ export default function ResumeBuilder() {
             </CardDescription>
           </CardHeader>
           <CardContent>
-            <div className="bg-gray-50 p-4 rounded-md whitespace-pre-wrap font-mono text-sm">
+            <div className="bg-secondary/50 p-4 rounded-md whitespace-pre-wrap font-mono text-sm border border-primary/10">
               {resumeContent}
             </div>
           </CardContent>
           <CardFooter className="flex justify-end space-x-2">
-            <Button variant="outline" onClick={handleCopyToClipboard}>
+            <Button variant="outline" onClick={handleCopyToClipboard} className="border-primary/20 hover:bg-primary/5">
               クリップボードにコピー
             </Button>
-            <Button onClick={handleDownloadPDF}>
+            <Button onClick={handleDownloadPDF} className="bg-primary hover:bg-primary/90">
               PDFでダウンロード
             </Button>
           </CardFooter>

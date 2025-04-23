@@ -92,7 +92,7 @@ export default function ProfileForm() {
               name="experience"
               value={formData.experience}
               onChange={handleChange}
-              className="w-full min-h-[100px] p-2 border rounded-md"
+              className="w-full min-h-[100px] p-2 border border-input rounded-md focus:outline-none focus:ring-2 focus:ring-primary/30"
               placeholder="これまでの職務経験を記入してください"
               required 
             />
@@ -133,7 +133,7 @@ export default function ProfileForm() {
             />
           </div>
           
-          <Button type="submit" className="w-full" disabled={isLoading}>
+          <Button type="submit" className="w-full bg-primary hover:bg-primary/90" disabled={isLoading}>
             {isLoading ? '保存中...' : 'プロフィールを保存'}
           </Button>
         </form>

@@ -11,6 +11,10 @@ backend/__pycache__
 backend/**/__pycache__
 backend/.env
 backend/api/venv/
+backend/api/venv/**/*
+backend/api/tests/__pycache__/
+backend/api/app/__pycache__/
+backend/api/app/**/__pycache__/
 
 # OS files
 .DS_Store

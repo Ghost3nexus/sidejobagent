@@ -61,7 +61,7 @@ export default function JobList() {
                 {job.skills.map((skill) => (
                   <span 
                     key={skill} 
-                    className="px-2 py-1 bg-blue-100 text-blue-800 rounded-full text-sm"
+                    className="px-2 py-1 bg-primary/10 text-primary rounded-full text-sm"
                   >
                     {skill}
                   </span>
@@ -70,12 +70,12 @@ export default function JobList() {
               <div className="flex justify-end">
                 <Button 
                   variant="outline" 
-                  className="mr-2"
+                  className="mr-2 border-primary/20 hover:bg-primary/5"
                   onClick={() => window.open(job.url, '_blank')}
                 >
                   詳細を見る
                 </Button>
-                <Button>応募する</Button>
+                <Button className="bg-primary hover:bg-primary/90">応募する</Button>
               </div>
             </CardContent>
           </Card>
